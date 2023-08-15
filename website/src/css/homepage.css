@@ -1,0 +1,104 @@
+/* make root variables */
+:root {
+  --beige: #DDD0C8;
+  --gray: #373737;
+  --blue: #283C63;
+  --dark-blue: #202f4b;
+  --font1: 'Paytone One', sans-serif;
+  --font2: 'Dancing Script', cursive;
+  --font3: 'Great Vibes', cursive;
+  --font4: 'Playfair Display', serif;
+  --font5: 'Lobster Two', cursive;
+  --font6: 'Petit Formal Script', cursive;
+  --font7: 'Prata', serif;
+}
+
+#favicon {
+  border-radius: 10px;
+}
+
+#logo-li {
+  width: 10%;
+  height: 10%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+#logo-img {
+  width: 100%;
+  height: 50%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+body {
+  background-color: var(--blue);
+  color: var(--beige);
+  font-family: var(--font5);
+  /* font-style: italic; */
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+
+header {
+  /* width: 100%; */
+  color: var(--beige);
+  padding: 1rem;
+  /* margin-bottom: 1rem; */
+  margin-top: 1rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+  /* padding-top: 30px; */
+}
+header nav ul li a {
+  margin: 0 1rem;
+  text-decoration: none;
+  list-style: none;
+  color: var(--beige);
+}
+header nav {
+  width: 100%;
+  position: fixed;
+  padding-top: 10px;
+  background-color: var(--dark-blue);
+  z-index: 1;
+  margin-left: -50px;
+  padding-right: 50px;
+  height: 150px;
+  font-size: 2rem;
+  margin-top: 5px;
+}
+header nav ul li {
+  text-decoration: none;
+  list-style: none;
+  color: var(--beige);
+  height: 75px;
+  width: 250px;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  /* line-height: 100px; */
+  /* margin-top: 10px;
+  margin-bottom: 10px; */
+  border-radius: 10px;
+  transition: 0.5s;
+}
+header nav ul li:hover {
+  background-color: var(--blue);
+  text-decoration: none;
+}
