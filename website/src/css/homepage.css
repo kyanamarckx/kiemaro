@@ -1,9 +1,13 @@
 /* make root variables */
 :root {
   --beige: #DDD0C8;
+  --light-beige: #FFFBFA;
   --gray: #373737;
+  --light-gray: #A6A6A6;
   --blue: #283C63;
   --dark-blue: #202f4b;
+  --brown: #827C7C;
+  --white: #FFFFFF;
   --font1: 'Paytone One', sans-serif;
   --font2: 'Dancing Script', cursive;
   --font3: 'Great Vibes', cursive;
@@ -11,7 +15,28 @@
   --font5: 'Lobster Two', cursive;
   --font6: 'Petit Formal Script', cursive;
   --font7: 'Prata', serif;
+  --font8: 'Noto Serif Display', serif;
 }
+
+/* webkit scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--light-gray);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--beige);
+}
+
 
 #favicon {
   border-radius: 10px;
@@ -26,8 +51,9 @@
   padding-right: 0;
 }
 #logo-img {
-  width: 100%;
-  height: 50%;
+  width: auto;
+  /* height: 25%; */
+  height: 115px;
   margin-left: 0;
   margin-right: 0;
   padding-left: 0;
@@ -35,9 +61,9 @@
 }
 
 body {
-  background-color: var(--blue);
+  background-color: var(--brown);
   color: var(--beige);
-  font-family: var(--font5);
+  font-family: var(--font4);
   /* font-style: italic; */
   font-size: 1.5rem;
   font-weight: lighter;
@@ -68,12 +94,17 @@ header nav ul li a {
   text-decoration: none;
   list-style: none;
   color: var(--beige);
+  width: 100%;
+  height: 119px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 header nav {
   width: 100%;
   position: fixed;
   padding-top: 10px;
-  background-color: var(--dark-blue);
+  background-color: var(--gray);
   z-index: 1;
   margin-left: -50px;
   padding-right: 50px;
@@ -84,21 +115,37 @@ header nav {
 header nav ul li {
   text-decoration: none;
   list-style: none;
-  color: var(--beige);
-  height: 75px;
-  width: 250px;
+  color: var(--brown);
+  /* height: 75px;
+  width: 250px; */
   text-align: center;
   display: inline-flex;
   justify-content: center;
   align-items: center;
 
+
   /* line-height: 100px; */
   /* margin-top: 10px;
   margin-bottom: 10px; */
-  border-radius: 10px;
+  /* border-radius: 25px; */
+  /* padding-bottom: 15px; */
+  height: 119px;
+  width: 25%;
+  /* width: fit-content; */
   transition: 0.5s;
 }
+
 header nav ul li:hover {
-  background-color: var(--blue);
-  text-decoration: none;
+  background-color: var(--brown);
+}
+header nav ul li:first-of-type:hover {
+  background-color: var(--gray);
+}
+
+h1 {
+  padding-top: 7.5%;
+}
+
+p {
+  color: var(--light-beige);
 }
