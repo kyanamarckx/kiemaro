@@ -29,6 +29,10 @@
   --body2: #a2aeb8;
   --body3: #adb6b9;
   --timberwolf: #D9D8CEff;
+  --dark: #7d8f9a;
+  --dark: #818181;
+  /* --dark: #646464; */
+  /* --dark: #363636; */
   --font1: 'Paytone One', sans-serif;
   --font2: 'Dancing Script', cursive;
   --font3: 'Great Vibes', cursive;
@@ -49,6 +53,7 @@
   --font18: 'Silkscreen', cursive;
   --font19: 'VT323', monospace;
   --font20: 'Poiret One', cursive;
+  --font21: 'Libre Baskerville', serif;
 }
 
 /* webkit scrollbar */
@@ -68,28 +73,24 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--beige);
-}
-
-
-#favicon {
-  border-radius: 10px;
+  background: var(--cadet-gray);
 }
 
 #logo-li {
-  width: 10%;
-  height: 115px;
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 0;
+  width: 12%;
+  height: 119px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1%;
   padding-right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 #logo-img {
   width: auto;
   height: 115px;
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 0;
-  padding-right: 0;
 }
 
 #me {
@@ -111,13 +112,9 @@
 }
 
 body {
-  background-color: var(--battleship-gray);
-  background-color: var(--cadet-gray);
-  background-color: var(--body3);
-  /* background-color: var(--timberwolf); */
+  background-color: var(--dark);
   color: var(--wetstar);
   font-family: var(--font4);
-  /* font-style: italic; */
   font-size: 1.5rem;
   font-weight: lighter;
 }
@@ -131,6 +128,7 @@ header {
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
+  font-family: var(--font4);
 }
 header nav ul {
   display: flex;
@@ -146,6 +144,7 @@ header nav ul {
 }
 header nav ul li a {
   margin: 0 1rem;
+  font-size: 2rem;
   text-decoration: none;
   list-style: none;
   color: var(--wetstar);
@@ -163,17 +162,12 @@ header nav {
   width: 100%;
   position: fixed;
   padding-top: 10px;
-  /* background-color: var(--paynes-gray); */
-  /* background-color: var(--cadet-gray); */
-  
-  z-index: 1;
   margin-left: -50px;
   padding-right: 50px;
   height: 150px;
   font-size: 2rem;
   margin-top: 5px;
   background-color: transparent;
-  /* backdrop-filter: grayscale(100%); */
 }
 header nav ul li {
   text-decoration: none;
@@ -187,45 +181,28 @@ header nav ul li {
   height: 119px;
   width: 110%;
   transition: 0.5s;
-  backdrop-filter: grayscale(100%) blur(0px) brightness(40%);
+  backdrop-filter: grayscale(100%) blur(0px) brightness(50%);
 }
 
 header nav ul li:hover {
-  /* background-color: var(--slate-gray); */
-  backdrop-filter: grayscale(00%) blur(1px) brightness(90%);
+  backdrop-filter: grayscale(00%) blur(0px) brightness(80%);
   transition: 0.5s;
-  height: 117px;
+  height: 119px;
 }
-/* header nav ul li:first-of-type:hover {
-  background-color: var(--payness-gray);
-
-} */
 
 h1 {
-  font-size: 20rem;
+  font-size: 15rem;
   font-family: var(--font10);
+  font-family: var(--font20);
+  font-family: var(--font6);
   font-weight: 400;
   color: var(--french-gray);
-  /* color: var(--wetstar); */
   color: var(--white);
-  /* color: black; */
   text-align: center;
   margin-top: 5%;
   margin-bottom: 5%;
-  left: 2%;
-  right: auto;
-  /* text-shadow: 2px 2px var(--gray); */
+  text-shadow: 10px 2px var(--gray);
   transition: 0.5s;
-}
-#name {
-  /* background-color: var(--battleship-gray); */
-  color: var(--cadet-blue);
-  backdrop-filter: grayscale(00%) blur(0px) brightness(80%);
-  /* make the backgroundcolor transparent (opacity change) and not the text */
-  /* opacity: 0.7; */
-  border-radius: 100px;
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 p {
@@ -237,20 +214,17 @@ p {
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  background-image: url("../../../images/frontpage.jpeg");
+  background-image: url("../../../images/frontpage_logo1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   height: 101vh;
-  /* set the width over the full page */
   width: 101%;
   overflow-x: hidden;
   margin-left: -11px;
   margin-top: -50px;
-  /* padding-right: -15px; */
-  /* filter: blur(2px); */
   border-bottom: var(--paynes-gray) 10px ridge;
+  border-bottom: var(--white) 10px ridge;
   z-index: -1;
-  /* filter: brightness(100%); */
 }
