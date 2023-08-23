@@ -6,6 +6,9 @@
   --gray: #373737;
   --jet: #2E2B23;
   --light-gray: #A6A6A6;
+  --light-gray: #999999;
+  --light-gray: #c6c6c6;
+  --light-gray: #cacaca;
   --blue: #283C63;
   --dark-blue: #202f4b;
   --brown: #827C7C;
@@ -32,7 +35,16 @@
   --timberwolf: #D9D8CEff;
   --dark: #7d8f9a;
   --dark: #818181;
+  --dark: #2e2e2e;
+  --light: #e6e6e6;
+  --light: #cecece;
+  --light: #eaeaea;
+  --light: #232323;
   --rose: #d5a498;
+  --black: #000000;
+  --sea: #96B6C5;
+  --green-sea: #3BACB6;
+  --green-sea: #6998AB;
   /* --dark: #646464; */
   /* --dark: #363636; */
   --font1: 'Paytone One', sans-serif;
@@ -125,12 +137,17 @@
 
 body {
   background-color: var(--dark);
+  background-color: var(--light);
   color: var(--wetstar);
+  color: var(--gray);
   font-family: var(--font4);
   font-family: var(--montserrat);
-  /* font-family: var(--font17); */
-  font-size: 1.5rem;
-  font-weight: lighter;
+  font-family: var(--font17);
+  font-family: var(--font22);
+  font-family: var(--font23);
+  font-size: 2rem;
+  /* font-weight: bold; */
+  scroll-behavior: smooth;
 }
 
 header {
@@ -170,6 +187,7 @@ header nav {
   left: 0;
   margin-top: -33px;
   background-color: transparent;
+  z-index: 5;
 }
 header nav ul li {
   text-decoration: none;
@@ -190,33 +208,55 @@ header nav ul li:hover {
   transition: 0.5s;
 }
 
-h1 {
+#welcome {
+  font-family: var(--font6);
+  margin-top: 10vh;
+  backdrop-filter: grayscale(100%) blur(5px) brightness(50%);
+  background-color: var(--wetstar);
+  background-color: var(--light-gray);
+  /* background-color: var(--sea); */
+  color: var(--gray);
+  width: max-content;
+  height: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 15px;
+  border: 4px inset var(--gray);
+  box-shadow: 2px 2px 10px var(--black);
+  transition: 0.5s;
+}
+
+/* h1 {
   font-size: 2.5rem;
   font-family: var(--font10);
-  /* font-family: var(--font20); */
+  font-family: var(--font20);
   font-family: var(--font13);
   font-family: var(--font23);
   font-family: var(--montserrat);
-  font-weight: bold;
-  /* create a text shadow */
-  text-shadow: 2px 2px 4px var(--gray);
-  /* text-shadow: ; */
   color: var(--french-gray);
+  color: var(--gray);
   color: var(--white);
-  /* color: var(--rose); */
+  color: var(--rose);
+  display: flex;
   text-align: center;
   justify-self: center;
   align-self: center; 
   justify-content: center;
+  align-items: center;
   width: 30%;
   margin-left: auto;
   margin-right: auto;
-  /* margin-top: 5%; */
-  /* margin-bottom: 5%; */
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  
   transition: 0.5s;
-  backdrop-filter: grayscale(0%) blur(5px) brightness(100%);
+  
   border-radius: 25px;
-}
+} */
 
 button {
   text-decoration: none;
@@ -229,25 +269,38 @@ button a {
   background-color: transparent;
   border: none;
   color: var(--white);
-  font-family: var(--font11);
-  font-size: 2.5rem;
-  font-weight: lighter;
+  color: var(--green-sea);
+  /* color: var(--slate-gray); */
+  font-family: var(--font6);
+  font-size: 2.8rem;
+  font-weight: bold;
+  transition: 0.5s;
+  color: var(--gray);
+  color: var(--green-sea);
+  color: var(--brown);
+  /* text-shadow: var(--gray) 0px 1px 1px; */
+}
+button a:hover {
+  color: var(--white);
+  /* color: var(--green-sea); */
+  /* color: var(--slate-gray); */
   transition: 0.5s;
 }
 
 #kiemaro {
   color: var(--wetstar);
-  /* background-color: var(--gray); */
+  background-color: var(--gray);
   background-image: url("../../../images/frontpage.JPEG");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  backdrop-filter: grayscale(0%) blur(0px) brightness(200%);
   width: 95%;
-  height: 10vh;
+  height: 12vh;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 3%;
+  margin-top: 5%;
   font-family: var(--font17);
   padding: 2%;
   text-decoration: none;
@@ -255,7 +308,7 @@ button a {
   font-size: 2.3rem;
   transition: 0.5s;
   border-radius: 5px;
-  border: 4px inset var(--gray);
+  border: 4px inset var(--light-gray);
   padding: 10px;
 }
 #kiemaro:hover {
@@ -269,7 +322,12 @@ button a {
 }
 
 p {
-  color: var(--light-beige);
+  color: var(--light-gray);
+  /* color: var(--sea); */
+}
+
+span {
+  color: var(--sea);
 }
 
 #front {
@@ -291,4 +349,13 @@ p {
   border-bottom: var(--paynes-gray) 10px ridge;
   border-bottom: var(--white) 10px ridge;
   z-index: -1;
+}
+
+footer {
+  z-index: 0;
+  /* position: absolute; */
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background-color: var(--gray);
 }

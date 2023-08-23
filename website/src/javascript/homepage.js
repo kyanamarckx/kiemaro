@@ -9,7 +9,7 @@ window.addEventListener("scroll", function() {
   if (scrollTop > lastScrollTop) {
     // Scrolling down, hide the header
     header.style.transform = "translateY(-100%)";
-    header.style.transition = "transform 1s ease-in-out";
+    header.style.transition = "transform 1.5s ease-in-out";
   } else {
     // Scrolling up, show the header
     header.style.transform = "translateY(0)";
