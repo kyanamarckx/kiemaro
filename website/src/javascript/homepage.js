@@ -18,3 +18,34 @@ window.addEventListener("scroll", function() {
 
   lastScrollTop = scrollTop;
 });
+
+
+// ---------- Sections hover ----------
+var sections = document.querySelectorAll("section");
+var company = document.querySelector("#company");
+var companyP = company.querySelector("p");
+var companyButton = company.querySelector("button");
+
+company.addEventListener("mouseover", function() {
+  companyP.style.display = "block";
+  companyP.style.transition = "0.5s";
+  companyButton.style.display = "block";
+  companyButton.style.transition = "0.5s";
+  companyP.style.overflowY = "scroll";
+  // transition delay + make the appearance a fade
+  companyP.style.transitionDelay = "0.5s";
+  companyP.style.opacity = "1";
+  companyButton.style.transitionDelay = "0.5s";
+  companyButton.style.opacity = "1";
+
+});
+
+company.addEventListener("mouseout", function() {
+  companyP.style.display = "none";
+  companyP.style.transition = "0.5s";
+  companyButton.style.display = "none";
+  companyButton.style.transition = "0.5s";
+  companyP.style.opacity = "0";
+  companyButton.style.opacity = "0";
+  
+});
