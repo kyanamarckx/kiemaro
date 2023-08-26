@@ -7,8 +7,8 @@
   --jet: #2E2B23;
   --light-gray: #A6A6A6;
   --light-gray: #999999;
-  --light-gray: #c6c6c6;
-  --light-gray: #cacaca;
+  /* --light-gray: #c6c6c6;
+  --light-gray: #cacaca; */
   --blue: #283C63;
   --dark-blue: #202f4b;
   --brown: #827C7C;
@@ -141,15 +141,30 @@ body {
   background-color: var(--light);
   color: var(--wetstar);
   color: var(--gray);
-  font-family: var(--font4);
-  font-family: var(--montserrat);
-  font-family: var(--font17);
-  font-family: var(--font22);
   font-family: var(--font23);
   font-size: 2rem;
   /* font-weight: bold; */
   scroll-behavior: smooth;
+  z-index: 10;
 }
+
+main {
+  z-index: 10;
+  background-color: var(--light);
+  width: 100%;
+  height: 100%;
+  margin-left: -8px;
+  padding-right: 16px;
+  margin-bottom: 500px;
+  border-bottom: var(--wetstar) 10px ridge;
+}
+
+html {
+  scroll-behavior: smooth;
+  margin-bottom: -5px;
+  padding-bottom: -5px;
+}
+
 
 header {
   color: var(--beige);
@@ -209,6 +224,21 @@ header nav ul li:hover {
   transition: 0.5s;
 }
 
+@keyframes glow {
+  0% {
+    color: var(--gray);
+    text-shadow: 1px 1px 10px var(--black);
+  }
+  50% {
+    color: var(--sea);
+    text-shadow: 1px 1px 15px var(--green-sea);
+  }
+  100% {
+    color: var(--gray);
+    text-shadow: 1px 1px 10px var(--black);
+  }
+}
+
 #welkom {
   display: flex;
   justify-content: center;
@@ -217,6 +247,7 @@ header nav ul li:hover {
   margin-top: 20vh;
   color: var(--gray);
   font-size: 2.5rem;
+  text-shadow: 2px 2px 10px var(--black);
   width: 75%;
   height: 10%;
   margin-left: auto;
@@ -226,6 +257,10 @@ header nav ul li:hover {
   padding-right: 15px;
   border-radius: 15px;
   transition: 0.5s;
+  /* create an animation that loops infitely */
+  /* animation: fade-in 1s ease-in-out infinite; */
+  /* transform: scale(0.94); */
+  animation: glow 4s ease-in-out infinite;
 }
 
 @keyframes fade-in {
@@ -482,7 +517,7 @@ header nav ul li:hover {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: 600px;
+  height: 450px;
   width: 100%;
   transition: 1s;
   z-index: 5;
@@ -498,7 +533,8 @@ header nav ul li:hover {
 
 #contact div p {
   color: var(--white);
-  height: 50%;
+  color: var(--wetstar);
+  height: 35%;
   font-size: 1.5rem;
   display: flex;
   justify-content: center;
@@ -630,19 +666,91 @@ span {
   height: 108vh;
   width: 100%;
   overflow-x: hidden;
-  margin-left: -11px;
   margin-top: -50px;
-  padding-right: 19px;
+  padding-right: 16px;
   border-bottom: var(--paynes-gray) 10px ridge;
   border-bottom: var(--white) 10px ridge;
   z-index: -1;
 }
 
 footer {
-  z-index: 0;
-  /* position: absolute; */
+  z-index: -2;
+  position: fixed;
   bottom: 0;
-  width: 100%;
-  height: 100px;
   background-color: var(--gray);
+  /* background-image: url("../../../images/frontpage.JPEG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; */
+  /* border-top: var(--wetstar) 10px ridge; */
+  height: 500px;
+  width: 100%;
+  overflow-x: hidden;
+  margin-left: -11px;
+  padding-right: 19px;
+  backdrop-filter: grayscale(0%) blur(0px) brightness(200%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  transition: 0.5s;
+  /* border-top-left-radius: 50px;
+  border-top-right-radius: 50px; */
+}
+
+footer p {
+  color: var(--white);
+  font-size: 2rem;
+  font-family: var(--font23);
+  font-weight: bold;
+  backdrop-filter: grayscale(0%) blur(5px) brightness(100%);
+  border-radius: 25px;
+  padding: 25px;
+  transition: 0.5s;
+}
+
+#footer1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 33.33%;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#footer1 img {
+  width: auto;
+  height: 200px;
+}
+
+#footer2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 33.33%;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#footer2 img {
+  width: auto;
+  height: 200px;
+}
+
+#footer3 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 33.33%;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#footer3 img {
+  width: auto;
+  height: 200px;
 }

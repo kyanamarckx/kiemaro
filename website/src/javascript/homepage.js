@@ -162,15 +162,21 @@ contactDiv.addEventListener("mouseover", function() {
   contactP.style.transition = "0.5s";
   contactP.classList.remove("fade-out");
   contactP.classList.add("fade-in");
-  contactButton.style.display = "block";
+  
   contactButton.style.transition = "0.5s";
   contactButton.classList.remove("fade-out");
   contactButton.classList.add("fade-in");
-  contactP.style.overflowY = "scroll";
+  contactP.style.overflowY = "hidden";
+  if (contactP.scrollHeight > contactP.clientHeight) {
+    contactP.style.overflowY = "scroll"; // Show the scrollbar
+  } else {
+    contactP.style.overflowY = "hidden"; // Hide the scrollbar
+  }
   contactP.style.transitionDelay = "0.5s";
   contactP.style.opacity = "1";
   // contactButton.style.transitionDelay = "1.5s";
   contactButton.style.opacity = "1";
+  contactButton.style.display = "block";
 });
 
 contact.addEventListener("mouseout", function() {
