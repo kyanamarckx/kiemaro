@@ -141,6 +141,7 @@ main {
 
 html {
   scroll-behavior: smooth;
+  margin-top: -9px;
   margin-bottom: -5px;
   padding-bottom: -5px;
 }
@@ -213,7 +214,7 @@ header nav ul li a {
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  background-image: url("../../../../images/frontpage_logo1.png");
+  background-image: url("../../../../images/frontpage_logo2.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -225,7 +226,61 @@ header nav ul li a {
   padding-right: 16px;
   border-bottom: var(--paynes-gray) 10px ridge;
   border-bottom: var(--white) 10px ridge;
-  z-index: -1;
+  z-index: -2;
+}
+
+#front h2 {
+  font-family: var(--font6);
+  font-size: 100%;
+  color: var(--white);
+  text-shadow: 2px 2px 10px var(--black);
+  border-radius: 5px;
+  height: 80px;
+  width: fit-content;
+  padding-left: 25px;
+  padding-right: 25px;
+  transition: 0.5s;
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40%;
+  backdrop-filter: blur(5px) brightness(100%);
+  border: 4px inset var(--black);
+  border: 4px inset var(--white);
+}
+
+#front a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 80px;
+  margin-top: 38%;
+  margin-right: 10%;
+  transition: 0.5s;
+  background-color: transparent;
+  backdrop-filter: blur(5px) brightness(50%);
+  border: 4px inset var(--black);
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--white);
+  font-family: var(--font6);
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px var(--black);
+}
+#front a:hover {
+  background-color: var(--wetstar);
+  text-shadow: 2px 2px 4px var(--black);
+  color: var(--gray);
+  transition: 0.5s;
+  border: 4px inset var(--black);
+  border-radius: 5px;
 }
 
 
@@ -576,7 +631,8 @@ span {
 button {
   text-decoration: none;
   background-color: var(--gray);
-  padding: 10px;
+  width: 225px;
+  height: 60px;
   border-radius: 10px;
   border: 4px inset var(--black);
   transition: 0.5s;
@@ -597,9 +653,10 @@ button a {
   font-size: 2rem;
   font-weight: bold;
   transition: 0.5s;
+  /* padding: 10px; */
   color: var(--wetstar);
-  width: 100%;
-  height: 100%;
+  width: 225px;
+  height: 60px;
 }
 button a:hover {
   color: var(--gray);
