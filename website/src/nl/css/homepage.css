@@ -1,4 +1,4 @@
-/* make root variables */
+/* ---------- Root ---------- */
 :root {
   --beige: #DDD0C8;
   --light-beige: #FFFBFA;
@@ -73,7 +73,8 @@
   --montserrat: 'Montserrat', sans-serif;
 }
 
-/* webkit scrollbar */
+
+/* ---------- Scrollbar ---------- */
 ::-webkit-scrollbar {
   width: 5px;
   border-radius: 10px;
@@ -94,6 +95,8 @@
   background: var(--cadet-gray);
 }
 
+
+/* ---------- Logo Navbar ---------- */
 #logo-li {
   width: 12%;
   height: 100px;
@@ -105,37 +108,14 @@
   justify-content: center;
   align-items: center;
 }
-#logo-li:hover {
-  /* background-color: var(--gray); */
-  transition: 0.5s;
-  /* border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px; */
-  /* height: 120px; */
-  /* backdrop-filter: grayscale(0%) blur(1px) brightness(60%); */
-}
+
 #logo-img {
   width: auto;
   height: 95px;
 }
 
-#me {
-  border-radius: 50%;
-  background-color: var(--gray);
-  width: 200px;
-  height: 200px;
-  margin-left: auto;
-  margin-right: 5%;
-  display: block;
-  margin-top: 15%;
-  margin-bottom: 5%;
-  border: 5px inset var(--light-gray);
-  transition: 0.5s;
-}
-#me:hover {
-  border: 5px inset var(--beige);
-  transition: 0.5s;
-}
 
+/* ---------- General ---------- */
 body {
   background-color: var(--dark);
   background-color: var(--light);
@@ -143,7 +123,6 @@ body {
   color: var(--gray);
   font-family: var(--font23);
   font-size: 2rem;
-  /* font-weight: bold; */
   scroll-behavior: smooth;
   z-index: 10;
 }
@@ -156,6 +135,7 @@ main {
   margin-left: -8px;
   padding-right: 16px;
   margin-bottom: 500px;
+  overflow-x: hidden;
   border-bottom: var(--wetstar) 10px ridge;
 }
 
@@ -166,10 +146,24 @@ html {
 }
 
 
+/* ---------- Header ---------- */
 header {
   color: var(--beige);
   font-family: var(--font4);
 }
+
+header nav {
+  width: 102%;
+  position: fixed;
+  height: 100px;
+  font-size: 2rem;
+  top: 0;
+  left: 0;
+  margin-top: -33px;
+  background-color: transparent;
+  z-index: 5;
+}
+
 header nav ul {
   display: flex;
   justify-content: space-between;
@@ -179,8 +173,25 @@ header nav ul {
   margin-left: 0;
   padding-left: 0;
   padding-right: 0;
-  
 }
+
+header nav ul li {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  height: 119px;
+  height: 100px;
+  width: 17.6%;
+  transition: 0.5s;
+  backdrop-filter: grayscale(100%) blur(0px) brightness(50%);
+}
+header nav ul li:hover {
+  backdrop-filter: grayscale(0%) blur(2px) brightness(75%);
+  transition: 0.5s;
+}
+
 header nav ul li a {
   margin: 0 1rem;
   font-size: 2rem;
@@ -194,36 +205,31 @@ header nav ul li a {
   align-items: center;
   transition: 0.5s;
 }
-header nav {
-  width: 102%;
-  position: fixed;
-  height: 100px;
-  font-size: 2rem;
-  top: 0;
-  left: 0;
-  margin-top: -33px;
-  background-color: transparent;
-  z-index: 5;
-}
-header nav ul li {
-  text-decoration: none;
+
+
+/* ---------- Frontpage ---------- */
+#front {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  list-style: none;
-  height: 119px;
-  height: 100px;
-  width: 17.6%;
-  transition: 0.5s;
-  backdrop-filter: grayscale(100%) blur(0px) brightness(50%);
+  flex-direction: row;
+  background-image: url("../../../../images/frontpage_logo1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 108vh;
+  width: 100%;
+  overflow-x: hidden;
+  margin-top: -50px;
+  padding-right: 16px;
+  border-bottom: var(--paynes-gray) 10px ridge;
+  border-bottom: var(--white) 10px ridge;
+  z-index: -1;
 }
 
 
-header nav ul li:hover {
-  backdrop-filter: grayscale(0%) blur(2px) brightness(75%);
-  transition: 0.5s;
-}
-
+/* ---------- Slogan ---------- */
 @keyframes glow {
   0% {
     color: var(--gray);
@@ -247,8 +253,7 @@ header nav ul li:hover {
   margin-top: 20vh;
   color: var(--gray);
   font-size: 2.5rem;
-  text-shadow: 2px 2px 10px var(--black);
-  width: 75%;
+  width: 99%;
   height: 10%;
   margin-left: auto;
   margin-right: auto;
@@ -257,12 +262,37 @@ header nav ul li:hover {
   padding-right: 15px;
   border-radius: 15px;
   transition: 0.5s;
-  /* create an animation that loops infitely */
-  /* animation: fade-in 1s ease-in-out infinite; */
-  /* transform: scale(0.94); */
+  pointer-events: none;
+  user-select: none;
+}
+
+#welkom div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+#welkom div p {
+  color: transparent;
+  text-decoration: line-through;
+  text-decoration-color: var(--gray);
+  text-decoration-thickness: 3px;
+  text-decoration-style: solid;
+}
+
+#slogan {
+  min-width: max-content;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-shadow: 2px 2px 10px var(--black);
   animation: glow 4s ease-in-out infinite;
 }
 
+
+/* ---------- Sections ---------- */
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -289,6 +319,11 @@ header nav ul li:hover {
   animation: fade-out 1s ease-in-out;
 }
 
+span {
+  color: var(--sea);
+}
+
+/* ----- 1 ----- */
 #container1 {
   display: flex;
   justify-content: space-around;
@@ -298,7 +333,6 @@ header nav ul li:hover {
   height: 800px;
   margin-left: auto;
   margin-right: auto;
-  /* margin-top: 5%; */
   margin-bottom: 5%;
 }
 
@@ -308,7 +342,7 @@ header nav ul li:hover {
 }
 
 #container1 section div {
-  background-image: url("../../../images/rocks_bw.JPEG");
+  background-image: url("../../../../images/rocks_bw.JPEG");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -320,13 +354,10 @@ header nav ul li:hover {
   border: 4px inset var(--gray);
   box-shadow: 2px 2px 10px var(--black);
   transition: 1s;
-  /* transition delay */
   transition-delay: 0.5s;
 }
-
 #container1 section div:hover {
-/* .cardhover { */
-  background-image: url("../../../images/rocks_colour.JPEG");
+  background-image: url("../../../../images/rocks_colour.JPEG");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -347,11 +378,9 @@ header nav ul li:hover {
 
 #company div p {
   color: var(--white);
-  /* height: 40vh; */
   height: 50%;
   font-size: 1.5rem;
   display: flex;
-  /* text-align: center; */
   justify-content: center;
   align-items: center;
   backdrop-filter: grayscale(0%) blur(5px) brightness(70%);
@@ -383,6 +412,7 @@ header nav ul li:hover {
   margin-right: 10px;
 }
 
+/* ----- 2 ----- */
 #container2 {
   display: flex;
   justify-content: space-around;
@@ -402,7 +432,7 @@ header nav ul li:hover {
 }
 
 #container2 section div {
-  background-image: url("../../../images/rocks_bw.JPEG");
+  background-image: url("../../../../images/rocks_bw.JPEG");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -414,13 +444,10 @@ header nav ul li:hover {
   border: 4px inset var(--gray);
   box-shadow: 2px 2px 10px var(--black);
   transition: 1s;
-  /* transition delay */
   transition-delay: 0.5s;
 }
-
 #container2 section div:hover {
-/* .cardhover { */
-  background-image: url("../../../images/rocks_colour.JPEG");
+  background-image: url("../../../../images/rocks_colour.JPEG");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -475,6 +502,7 @@ header nav ul li:hover {
   margin-right: 10px;
 }
 
+/* ----- 3 ----- */
 #container3 {
   display: flex;
   justify-content: space-around;
@@ -494,7 +522,7 @@ header nav ul li:hover {
 }
 
 #container3 section div {
-  background-image: url("../../../images/rocks_bw.JPEG");
+  background-image: url("../../../../images/rocks_bw.JPEG");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -506,13 +534,10 @@ header nav ul li:hover {
   border: 4px inset var(--gray);
   box-shadow: 2px 2px 10px var(--black);
   transition: 1s;
-  /* transition delay */
   transition-delay: 0.5s;
 }
-
 #container3 section div:hover {
-/* .cardhover { */
-  background-image: url("../../../images/rocks_colour.JPEG");
+  background-image: url("../../../../images/rocks_colour.JPEG");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -547,35 +572,7 @@ header nav ul li:hover {
 }
 
 
-/* h1 {
-  font-size: 2.5rem;
-  font-family: var(--font10);
-  font-family: var(--font20);
-  font-family: var(--font13);
-  font-family: var(--font23);
-  font-family: var(--montserrat);
-  color: var(--french-gray);
-  color: var(--gray);
-  color: var(--white);
-  color: var(--rose);
-  display: flex;
-  text-align: center;
-  justify-self: center;
-  align-self: center; 
-  justify-content: center;
-  align-items: center;
-  width: 30%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 5px;
-  padding-left: 15px;
-  padding-right: 15px;
-  
-  transition: 0.5s;
-  
-  border-radius: 25px;
-} */
-
+/* ---------- Buttons ---------- */
 button {
   text-decoration: none;
   background-color: var(--gray);
@@ -587,7 +584,6 @@ button {
   margin-left: auto;
   margin-right: auto;
 }
-
 button:hover {
   background-color: var(--wetstar);
   border: 4px inset var(--black);
@@ -610,80 +606,13 @@ button a:hover {
   transition: 0.5s;
 }
 
-#kiemaro {
-  color: var(--wetstar);
-  background-color: var(--gray);
-  background-image: url("../../../images/frontpage.JPEG");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  backdrop-filter: grayscale(0%) blur(0px) brightness(200%);
-  width: 95%;
-  height: 12vh;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5%;
-  font-family: var(--font17);
-  padding: 2%;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 2.3rem;
-  transition: 0.5s;
-  border-radius: 5px;
-  border: 4px inset var(--light-gray);
-  padding: 10px;
-}
-#kiemaro:hover {
-  color: var(--wetstar);
-  font-weight: bold;
-  background-color: var(--gray);
-  border-color: var(--gray);
-  transition: 1s;
-  /* create a cool box shadow effect */
-  box-shadow: 5px 5px 10px var(--gray);
-}
 
-p {
-  color: var(--light-gray);
-  /* color: var(--sea); */
-}
-
-span {
-  color: var(--sea);
-}
-
-#front {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-  background-image: url("../../../images/frontpage_logo1.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  height: 108vh;
-  width: 100%;
-  overflow-x: hidden;
-  margin-top: -50px;
-  padding-right: 16px;
-  border-bottom: var(--paynes-gray) 10px ridge;
-  border-bottom: var(--white) 10px ridge;
-  z-index: -1;
-}
-
+/* ---------- Footer ---------- */
 footer {
   z-index: -2;
   position: fixed;
   bottom: 0;
   background-color: var(--gray);
-  /* background-image: url("../../../images/frontpage.JPEG");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; */
-  /* border-top: var(--wetstar) 10px ridge; */
   height: 500px;
   width: 100%;
   overflow-x: hidden;
@@ -695,8 +624,6 @@ footer {
   align-items: center;
   flex-direction: row;
   transition: 0.5s;
-  /* border-top-left-radius: 50px;
-  border-top-right-radius: 50px; */
 }
 
 footer p {
@@ -720,6 +647,7 @@ footer p {
   margin-left: auto;
   margin-right: auto;
 }
+
 #footer1 img {
   width: auto;
   height: 200px;
@@ -735,6 +663,7 @@ footer p {
   margin-left: auto;
   margin-right: auto;
 }
+
 #footer2 img {
   width: auto;
   height: 200px;
@@ -750,6 +679,7 @@ footer p {
   margin-left: auto;
   margin-right: auto;
 }
+
 #footer3 img {
   width: auto;
   height: 200px;
