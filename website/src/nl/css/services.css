@@ -128,5 +128,389 @@ html {
 }
 
 
+/* ---------- Header ---------- */
+header {
+  color: var(--beige);
+  font-family: var(--font4);
+}
+
+header nav {
+  width: 102%;
+  position: fixed;
+  height: 100px;
+  font-size: 2rem;
+  top: 0;
+  left: 0;
+  margin-top: -33px;
+  background-color: transparent;
+  z-index: 5;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  list-style: none;
+  margin-right: 0;
+  margin-left: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+header nav ul li {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  height: 119px;
+  height: 100px;
+  width: 17.6%;
+  transition: 0.5s;
+  backdrop-filter: grayscale(100%) blur(0px) brightness(50%);
+}
+header nav ul li:hover {
+  backdrop-filter: grayscale(0%) blur(2px) brightness(75%);
+  transition: 0.5s;
+}
+header nav ul li:nth-of-type(4) {
+  backdrop-filter: grayscale(0%) blur(2px) brightness(100%);
+}
+
+header nav ul li a {
+  margin: 0 1rem;
+  font-size: 2rem;
+  text-decoration: none;
+  list-style: none;
+  color: var(--wetstar);
+  width: 110%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
 
 
+/* ---------- Logo Navbar ---------- */
+#logo-li {
+  width: 12%;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  /* padding-left: 1%; */
+  padding-right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo-img {
+  width: auto;
+  height: 95px;
+}
+
+
+/* ---------- Services ---------- */
+#services {
+  background-image: url(../../../../images/palm1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  width: 102%;
+  margin-top: -40px;
+  border-bottom: var(--wetstar) 10px ridge;
+}
+
+#services div {
+  padding-bottom: 1%;
+}
+
+/* ----- Title ----- */
+#title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font6);
+  color: var(--gray);
+  font-size: 2.5rem;
+  width: 99%;
+  height: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 150px;
+  border-radius: 15px;
+  transition: 0.5s;
+  pointer-events: none;
+  user-select: none;
+}
+
+#title div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 75%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+#title div p {
+  color: transparent;
+  text-decoration: line-through;
+  text-decoration-color: var(--white);
+  text-decoration-thickness: 3px;
+  text-decoration-style: solid;
+}
+
+#title div h1 {
+  font-size: 5rem;
+  color: var(--white);
+  min-width: max-content;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-shadow: 5px 5px 15px var(--black);
+}
+
+/* ----- Web Development */
+#webdev div {
+  backdrop-filter: grayscale(0%) blur(1px) brightness(50%);
+  border-top-right-radius: 150px;
+  border-bottom-right-radius: 150px;
+  width: 75%;
+  height: 225px;
+  margin-top: -20px;
+  transition: 0.5s;
+}
+
+#webdev div:hover {
+  backdrop-filter: grayscale(0%) blur(1px) brightness(60%);
+  width: 80%;
+  transition: 0.5s;
+}
+
+#webdev div h2 {
+  font-size: 2.5rem;
+  font-family: var(--font23);
+  font-weight: bold;
+  color: var(--wetstar);
+  text-align: end;
+  margin-right: 125px;
+  padding-top: 15px;
+}
+
+/* ----- Web Design ----- */
+#webdesign div {
+  backdrop-filter: grayscale(0%) blur(1px) brightness(50%);
+  border-top-left-radius: 150px;
+  border-bottom-left-radius: 150px;
+  width: 75%;
+  height: 225px;
+  margin-left: auto;
+  transition: 0.5s;
+}
+
+#webdesign div:hover {
+  backdrop-filter: grayscale(0%) blur(1px) brightness(60%);
+  width: 80%;
+  transition: 0.5s;
+}
+
+#webdesign div h2 {
+  font-size: 2.5rem;
+  font-family: var(--font23);
+  font-weight: bold;
+  color: var(--wetstar);
+  text-align: start;
+  margin-left: 125px;
+  padding-top: 15px;
+}
+
+/* ----- Web Hosting ----- */
+#webhosting div {
+  backdrop-filter: grayscale(0%) blur(1px) brightness(50%);
+  border-top-right-radius: 150px;
+  border-bottom-right-radius: 150px;
+  width: 75%;
+  height: 225px;
+  transition: 0.5s;
+}
+
+#webhosting div:hover {
+  backdrop-filter: grayscale(0%) blur(1px) brightness(60%);
+  width: 80%;
+  transition: 0.5s;
+}
+
+#webhosting div h2 {
+  font-size: 2.5rem;
+  font-family: var(--font23);
+  font-weight: bold;
+  color: var(--wetstar);
+  text-align: end;
+  margin-right: 125px;
+  padding-top: 15px;
+}
+
+/* ----- E-mail ----- */
+#email div {
+  backdrop-filter: grayscale(0%) blur(1px) brightness(50%);
+  border-top-left-radius: 150px;
+  border-bottom-left-radius: 150px;
+  width: 75%;
+  height: 225px;
+  margin-left: auto;
+  transition: 0.5s;
+}
+
+#email div:hover {
+  backdrop-filter: grayscale(0%) blur(1px) brightness(60%);
+  width: 80%;
+  transition: 0.5s;
+}
+
+#email div h2 {
+  font-size: 2.5rem;
+  font-family: var(--font23);
+  font-weight: bold;
+  color: var(--wetstar);
+  text-align: start;
+  margin-left: 125px;
+  padding-top: 15px;
+}
+
+/* ----- Database ----- */
+#database div {
+  backdrop-filter: grayscale(0%) blur(1px) brightness(50%);
+  border-top-right-radius: 150px;
+  border-bottom-right-radius: 150px;
+  width: 75%;
+  height: 225px;
+  transition: 0.5s;
+}
+
+#database div:hover {
+  backdrop-filter: grayscale(0%) blur(1px) brightness(60%);
+  width: 80%;
+  transition: 0.5s;
+}
+
+#database div h2 {
+  font-size: 2.5rem;
+  font-family: var(--font23);
+  font-weight: bold;
+  color: var(--wetstar);
+  text-align: end;
+  margin-right: 125px;
+  padding-top: 15px;
+}
+
+/* ----- Web Maintenance ----- */
+#maintenance div {
+  backdrop-filter: grayscale(0%) blur(1px) brightness(50%);
+  border-top-left-radius: 150px;
+  border-bottom-left-radius: 150px;
+  width: 75%;
+  height: 225px;
+  margin-left: auto;
+  margin-bottom: 5%;
+  transition: 0.5s;
+}
+
+#maintenance div:hover {
+  backdrop-filter: grayscale(0%) blur(1px) brightness(60%);
+  width: 80%;
+  transition: 0.5s;
+}
+
+#maintenance div h2 {
+  font-size: 2.5rem;
+  font-family: var(--font23);
+  font-weight: bold;
+  color: var(--wetstar);
+  text-align: start;
+  margin-left: 125px;
+  padding-top: 15px;
+}
+
+
+/* ---------- Footer ---------- */
+footer {
+  z-index: -2;
+  position: fixed;
+  bottom: 0;
+  background-color: var(--gray);
+  height: 500px;
+  width: 100%;
+  overflow-x: hidden;
+  margin-left: -11px;
+  padding-right: 19px;
+  backdrop-filter: grayscale(0%) blur(0px) brightness(200%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  transition: 0.5s;
+}
+
+footer p {
+  color: var(--white);
+  font-size: 2rem;
+  font-family: var(--font23);
+  font-weight: bold;
+  backdrop-filter: grayscale(0%) blur(5px) brightness(100%);
+  border-radius: 25px;
+  padding: 25px;
+  transition: 0.5s;
+}
+
+#footer1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 33.33%;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#footer1 img {
+  width: auto;
+  height: 200px;
+}
+
+#footer2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 33.33%;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#footer2 img {
+  width: auto;
+  height: 200px;
+}
+
+#footer3 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 33.33%;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#footer3 img {
+  width: auto;
+  height: 200px;
+}
