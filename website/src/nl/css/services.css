@@ -388,7 +388,7 @@ header nav ul li a {
   align-items: center;
   /* height: 225px; */
   min-width: max-content;
-  text-align: right;
+  /* text-align: right; */
   margin-right: 100px;
   padding-left: 50px;
   /* padding-top: 45px; */
@@ -396,9 +396,9 @@ header nav ul li a {
   
 }
 
-#webdev div div a {
+#webdev div div button {
   display: none;
-  margin-top: -40px;
+  margin-top: -20px;
   text-decoration: none;
   color: var(--wetstar);
   background-color: var(--gray);

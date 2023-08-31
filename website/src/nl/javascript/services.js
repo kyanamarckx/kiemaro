@@ -21,15 +21,9 @@ window.addEventListener("scroll", function() {
 
 
 // ---------- Questions Services ----------
+var dialog = document.querySelector("#dialog");
+
 var services = document.querySelector("#services");
-// var leftServices = services.querySelectorAll("#webdev, #webhosting, #databse");
-// var rightServices = services.querySelectorAll("#webdesign, #email, #maintenance");
-// var leftDiv = leftServices.querySelectorAll("div");
-// var rightDiv = rightServices.querySelectorAll("div");
-// var leftH2 = leftDiv.querySelectorAll("h2");
-// var rightH2 = rightDiv.querySelectorAll("h2");
-// var leftButton = leftDiv.querySelectorAll("a");
-// var rightButton = rightDiv.querySelectorAll("a");
 var webdev = services.querySelector("#webdev");
 var webdesign = services.querySelector("#webdesign");
 var webhosting = services.querySelector("#webhosting");
@@ -51,25 +45,31 @@ var emailH2 = emailDiv.querySelector("h2");
 var databaseH2 = databaseDiv.querySelector("h2");
 var maintenanceH2 = maintenanceDiv.querySelector("h2");
 
-var webdevButton = webdevDiv.querySelector("div a");
+var webdevButton = webdevDiv.querySelector("div button");
 var webdesignButton = webdesignDiv.querySelector("a");
 var webhostingButton = webhostingDiv.querySelector("a");
 var emailButton = emailDiv.querySelector("a");
 var databaseButton = databaseDiv.querySelector("a");
 var maintenanceButton = maintenanceDiv.querySelector("a");
 
+var submitButton = dialog.querySelector("input[type='submit']");
+
+// ----- Dialog -----
+webdevButton.addEventListener("click", function() {
+  dialog.showModal();
+});
+submitButton.addEventListener("submit", function() {
+  dialog.close();
+});
+
 
 // ----- Web Development -----
 webdevDiv.addEventListener("mouseover", function() {
-  
   webdevH2.style.transition = "1s";
   webdevButton.style.transition = "0.5s";
   webdevH2.classList.remove("slide-down");
   webdevH2.classList.add("slide-up");
   webdevH2.style.transform = "translateY(-50%)";
-  // make it go smoothly
-
-
   webdevButton.classList.remove("fade-out");
   webdevButton.classList.add("fade-in");
   webdevButton.style.display = "block";
