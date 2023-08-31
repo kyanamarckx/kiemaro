@@ -47,21 +47,25 @@
     </nav>
   </header>
   <main>
-    <!-- <section id="title">
-      <h1>Services</h1>
-
-    </section> -->
     <dialog id="dialog">
       <form id="form" action="form">
+        <button type="button" onclick="" id="close">X</button>
         <h1>Interesse, een opmerking of een vraag?</h1>
         <p>Laat het ons weten!</p>
         <input type="text" name="name" id="name" placeholder="Naam" required>
         <input type="email" name="email" id="email" placeholder="Email" required>
         <input type="text" name="subject" id="subject" placeholder="Onderwerp" required>
-        <textarea name="message" id="message" cols="30" rows="10" placeholder="Bericht" required></textarea>
+        <textarea name="message" id="message" cols="30" rows="1" placeholder="Bericht" required></textarea>
         <input type="submit" onclick="" value="Verstuur"></input>
       </form>
     </dialog>
+
+    <dialog id="emailSent">
+      <h1>Bedankt voor uw bericht!</h1>
+      <p>We zullen zo snel mogelijk contact met u opnemen.</p>
+      <div></div>
+    </dialog>
+
     <section id="services">
       <div id="title">
         <div>
@@ -81,8 +85,6 @@
           <div>
             <h2>Web Development</h2>
             <button type="button">Interesse?</button>
-            <!-- add a mailto button -->
-
           </div>
         </div>
       </div>
@@ -163,11 +165,8 @@
   </footer>
   <script src="../javascript/services.js"></script>
   <script>
-    // var form = document.getElementById("form");
-    // var naam = document.getElementById("name");
-    // var mail = document.getElementById("email");
-    // var onderwerp = document.getElementById("subject");
-    // var bericht = document.getElementById("message");
+    var dialog = document.getElementById("dialog");
+    var emailSent = document.getElementById("emailSent");
 
     window.onload = function() {
       document.getElementById("form").addEventListener("submit", function(event) {
@@ -176,15 +175,32 @@
         emailjs.sendForm("service_0y1fwra", "template_uor6zsp", this, "zH8j_LkpnK_kbF8Tw")
         .then(function(response) {
           console.log("E-mail verzonden: ", response);
+          emailSent.show();
+          setTimeout(function() {
+            emailSent.close();
+          }, 4000);
         }, function(error) {
           console.log("Fout bij het verzenden van de e-mail: ", error);
-      });
+        });
 
         document.getElementById("form").reset();
-        document.getElementById("dialog").close();
+        dialog.classList.add("close");
+        setTimeout(function() {
+          dialog.close();
+          dialog.classList.remove("close");
+          dialog.style.display = "none";
+        }, 600);      
       });
-}
+
+      document.getElementById("close").addEventListener("click", function() {
+        dialog.classList.add("close");
+        setTimeout(function() {
+          dialog.close();
+          dialog.classList.remove("close");
+          dialog.style.display = "none";
+        }, 600);
+      });
+    }
   </script>
-  
 </body>
 </html>

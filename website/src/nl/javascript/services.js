@@ -56,8 +56,14 @@ var submitButton = dialog.querySelector("input[type='submit']");
 
 // ----- Dialog -----
 webdevButton.addEventListener("click", function() {
-  dialog.showModal();
+  dialog.classList.add("open");
+
+  setTimeout(function() {
+    dialog.showModal();
+    dialog.style.display = "block";
+  }, 10);
 });
+
 submitButton.addEventListener("submit", function() {
   dialog.close();
 });

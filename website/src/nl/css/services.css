@@ -265,6 +265,15 @@ header nav ul li a {
   }
 }
 
+@keyframes progress {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
 .fade-in {
   animation: fade-in 1s ease-in-out;
 }
@@ -279,6 +288,41 @@ header nav ul li a {
 
 .slide-down {
   animation: slide-down 0.5s ease-in-out;
+}
+
+.open {
+  animation: fade-in 1s;
+}
+
+.close {
+  animation: fade-out 0.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+}
+
+/* ----- Dialog ----- */
+#dialog {
+  display: none;
+}
+
+#emailSent div {
+  width: 100%;
+  position: relative;
+  height: 20px;
+  width: 100%;
+  background-color: var(--gray);
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0px;
+  animation-name: progress;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
 }
 
 /* ----- Title ----- */
