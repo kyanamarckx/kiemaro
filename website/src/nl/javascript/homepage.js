@@ -25,6 +25,7 @@ var sections = document.querySelectorAll("section");
 
 var company = document.querySelector("#company");
 var companyDiv = company.querySelector("div");
+var companyH1 = company.querySelector("h1");
 var companyP = company.querySelector("p");
 var companyButton = company.querySelector("button");
 
@@ -50,6 +51,10 @@ var contactButton = contact.querySelector("button");
 
 
 companyDiv.addEventListener("mouseover", function() {
+  // companyH1.classList.remove("fade-in");
+  // companyH1.classList.add("fade-out");
+  // companyH1.style.display = "none";
+  // companyH1.style.transition = "0.5s";
   companyP.style.display = "block";
   companyP.style.transition = "0.5s";
   companyP.classList.remove("fade-out");
@@ -66,6 +71,10 @@ companyDiv.addEventListener("mouseover", function() {
 });
 
 company.addEventListener("mouseout", function() {
+  // companyH1.classList.remove("fade-out");
+  // companyH1.classList.add("fade-in");
+  // companyH1.style.display = "block";
+  // companyH1.style.transition = "0.5s";
   companyP.style.transition = "0.5s";
   companyP.classList.remove("fade-in");
   companyP.classList.add("fade-out");
