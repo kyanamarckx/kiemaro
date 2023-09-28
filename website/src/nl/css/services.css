@@ -328,7 +328,7 @@ header nav ul li a {
   display: none;
   background-color: transparent;
   backdrop-filter: brightness(0%);
-  
+  color: var(--sea);
 }
 
 #dialog[open]::backdrop {

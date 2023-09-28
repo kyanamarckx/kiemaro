@@ -27,27 +27,27 @@ var company = document.querySelector("#company");
 var companyDiv = company.querySelector("div");
 var companyH1 = company.querySelector("h1");
 var companyP = company.querySelector("p");
-var companyButton = company.querySelector("button");
+var companyButton = company.querySelector("a");
 
 var services = document.querySelector("#services");
 var servicesDiv = services.querySelector("div");
 var servicesP = services.querySelector("p");
-var servicesButton = services.querySelector("button");
+var servicesButton = services.querySelector("a");
 
 var aboutus = document.querySelector("#aboutus");
 var aboutusDiv = aboutus.querySelector("div");
 var aboutusP = aboutus.querySelector("p");
-var aboutusButton = aboutus.querySelector("button");
+var aboutusButton = aboutus.querySelector("a");
 
 var portfolio = document.querySelector("#portfolio");
 var portfolioDiv = portfolio.querySelector("div");
 var portfolioP = portfolio.querySelector("p");
-var portfolioButton = portfolio.querySelector("button");
+var portfolioButton = portfolio.querySelector("a");
 
 var contact = document.querySelector("#contact");
 var contactDiv = contact.querySelector("div");
 var contactP = contact.querySelector("p");
-var contactButton = contact.querySelector("button");
+var contactButton = contact.querySelector("a");
 
 
 companyDiv.addEventListener("mouseover", function() {
@@ -148,7 +148,12 @@ portfolioDiv.addEventListener("mouseover", function() {
   portfolioButton.style.transition = "0.5s";
   portfolioButton.classList.remove("fade-out");
   portfolioButton.classList.add("fade-in");
-  portfolioP.style.overflowY = "scroll";
+  // portfolioP.style.overflowY = "scroll";
+  if (portfolioP.scrollHeight > contactP.clientHeight) {
+    portfolioP.style.overflowY = "scroll"; // Show the scrollbar
+  } else {
+    portfolioP.style.overflowY = "hidden"; // Hide the scrollbar
+  }
   portfolioP.style.transitionDelay = "0.5s";
   portfolioP.style.opacity = "1";
   // portfolioButton.style.transitionDelay = "1.5s";
